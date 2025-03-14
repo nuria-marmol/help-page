@@ -1,6 +1,7 @@
-<!-- <ng-container *ngFor="let card of cards">
-  <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
-</ng-container> -->
-@for (card of cards; track card) {
-    <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
-}
+<div class="help-page">
+  <section>
+    @for (card of cards; track card) {
+      <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
+    }
+  </section>
+</div>

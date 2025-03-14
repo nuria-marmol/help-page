@@ -11,19 +11,34 @@ import { IconCardType } from '../icon-card-type';
 export class HelpPageComponent {
   cards: Array<IconCardType> = [
     {
-      title: 'Título de ejemplo1',
-      text: 'Párrafo 1 del componente',
-      iconClass: 'fa-solid fa-leaf'
+      title: 'Branches',
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      iconClass: 'fa-solid fa-code-branch'
     },
     {
-      title: 'Título de ejemplo2',
-      text: 'Párrafo 2 del componente',
-      iconClass: 'fa-solid fa-book'
-    },
-    {
-      title: 'Título de ejemplo3',
-      text: 'Párrafo 3 del componente',
+      title: 'Manage your account',
+      text: 'Ipsam corrupti nemo modi voluptatum quidem consequuntur error nisi neque unde.',
       iconClass: 'fa-solid fa-user'
+    },
+    {
+      title: 'Manage organisations, teams and projects',
+      text: 'Exercitationem aspernatur ullam labore quia nobis eum mollitia debitis totam voluptate.',
+      iconClass: 'fa-solid fa-puzzle-piece'
+    },
+    {
+      title: 'Manage billing',
+      text: 'Qui itaque laborum aut! Ipsum temporibus voluptatem quibusdam eaque itaque aspernatur omnis.',
+      iconClass: 'fa-solid fa-sack-dollar'
+    },
+    {
+      title: 'Authenticate to Abstract',
+      text: 'Voluptate reiciendis suscipit.',
+      iconClass: 'fa-solid fa-key'
+    },
+    {
+      title: 'Abstract support',
+      text: 'Pariatur possimus quisquam voluptates mollitia.',
+      iconClass: 'fa-solid fa-comments'
     }
   ]
 
