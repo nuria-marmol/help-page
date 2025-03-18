@@ -15,11 +15,23 @@
             font-size: 2rem;
         }
 
-        input {
-            height: 2.25rem;
-            width: 21rem;
-            padding: .5rem;
-            outline: none;
+        div {
+            position: relative;
+
+            input {
+                height: 2.25rem;
+                width: 21rem;
+                padding: .5rem;
+                outline: none;
+            }
+
+            i {
+                position: absolute;
+                right: .5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
         }
     }
 
@@ -27,7 +39,7 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(10rem, 20rem));
         grid-column-gap: 2.5rem;
-        grid-row-gap: 2.75rem;
+        grid-row-gap: 3rem;
         justify-content: center;
         margin: 6.5rem 0;
     }

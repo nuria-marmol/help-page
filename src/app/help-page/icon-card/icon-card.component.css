@@ -2,6 +2,7 @@
     display: flex;
     gap: 1.25rem;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
 
     h2 {
         margin: unset;
@@ -26,5 +27,13 @@
 
     .grey {
         color: var(--color-yellow);
+    }
+
+    button {
+        background-color: transparent;
+        border: unset;
+        padding: unset;
+        color: var(--color-medium-blue);
+        cursor: pointer;
     }
 }
