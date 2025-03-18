@@ -1,6 +1,10 @@
 <div class="help-page">
   <section>
-    @for (card of cards; track card) {
+    <h1>How can we help?</h1>
+    <input type="search" placeholder="Search" [(ngModel)]="inputSearch" (keydown.enter)="seeInputSearch()">
+  </section>
+  <section>
+    @for (card of cards; track card.title) {
       <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
     }
   </section>

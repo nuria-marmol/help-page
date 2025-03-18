@@ -12,12 +12,21 @@ export class IconCardComponent {
   @Input() card: IconCardType = {
     title: '',
     text: '',
-    iconClass: ''
+    iconName: '',
+    iconColor: ''
   };
 
   @Output() selectedCard = new EventEmitter<string>;
 
   sendTitle() {
     this.selectedCard.emit(this.card.title);
+  }
+
+  getClasses() {
+    return [
+      'fa-solid',
+      `fa-${this.card.iconName}`,
+      this.card.iconColor
+    ];
   }
 }

@@ -1,5 +1,6 @@
 export interface IconCardType {
     title: string;
     text: string;
-    iconClass: string;
+    iconName: string;
+    iconColor: string;
 }
