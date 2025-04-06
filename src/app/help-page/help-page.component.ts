@@ -49,12 +49,27 @@ export class HelpPageComponent {
       iconColor: 'light-blue'
     }
   ]
+  selectedCard: IconCardType = {
+    title: '',
+    text: '',
+    iconName: '',
+    iconColor: ''
+  };
+  allCards = true;
 
   seeSelectedCard(value: string) {
-    console.log(value);
+    const card = this.cards.find(element => element.title === value);
+    if (card) {
+      this.selectedCard = card;
+    }
+    this.allCards = false;
   }
 
   seeInputSearch() {
     console.log(this.inputSearch);
+  }
+
+  seeAllCards() {
+    this.allCards = true;
   }
 }
