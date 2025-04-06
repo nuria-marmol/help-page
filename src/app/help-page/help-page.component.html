@@ -1,14 +1,30 @@
 <div class="help-page">
-  <section>
+  <section class="search-section">
     <h1>How can we help?</h1>
     <div>
       <input type="search" placeholder="Search" [(ngModel)]="inputSearch" (keydown.enter)="seeInputSearch()">
       <i class="fa-solid fa-magnifying-glass" (click)="seeInputSearch()"></i>
     </div>
   </section>
-  <section>
-    @for (card of cards; track card.title) {
-      <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
-    }
-  </section>
+  @if (allCards) {
+    <section class="cards-section">
+      @for (card of cards; track card.title) {
+        <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
+      }
+    </section>
+  }
+  
+  @if (!allCards) {
+    <section class="selected-card-section">
+      <h2>{{ selectedCard.title }}</h2>
+      <p>{{ selectedCard.text }}</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit inventore nostrum dolorum ea optio corporis eveniet, architecto laudantium animi quaerat perferendis reiciendis error et magni maxime nesciunt voluptates autem rem! Dolores, architecto, ullam culpa perspiciatis sit minima sed fugiat obcaecati ab cupiditate praesentium iusto fugit autem dolorum.</p>
+      <p>Asperiores doloribus adipisci architecto, aliquid deserunt molestias dolores ab, iure harum cupiditate veritatis tenetur voluptatibus tempora consequuntur quam itaque vero sapiente delectus perspiciatis ea? Nobis, sed. Corporis illum ea eligendi.</p>
+      <p>Minus fugit dolorum exercitationem dignissimos sapiente dolores consequatur numquam, mollitia pariatur aspernatur sequi odit neque labore beatae nihil praesentium natus atque explicabo ipsam ex! Harum assumenda dicta maiores numquam ipsa libero enim amet, nemo repellat dolores, iusto consequatur aliquid porro? Vero quis sint quia quaerat, debitis totam harum voluptatibus doloribus dolores cumque reprehenderit fuga tempora labore veritatis magnam exercitationem assumenda animi ut nisi velit.</p>
+      <p>Rem voluptatem odio ea doloribus, sapiente distinctio exercitationem quam nihil assumenda perspiciatis maiores dolores magnam molestiae repellat omnis, quas adipisci iure nostrum rerum mollitia? Qui dolorum vel numquam exercitationem at nostrum fuga ea hic vero velit aut est, et voluptatem ipsum voluptas dignissimos id maiores officia iure! Suscipit facilis vel reiciendis illo, fugit magni aut voluptates accusamus non aliquam dolores, aperiam, natus reprehenderit omnis fugiat esse sapiente repudiandae doloremque placeat impedit harum libero minus molestiae. Tempore laboriosam inventore, voluptatem rem maiores optio ex, voluptate commodi quod recusandae adipisci vitae harum!</p>
+      <p>Voluptates, excepturi! Maiores dicta quia eos amet exercitationem quam illo repudiandae dolores aliquam eaque architecto quas totam repellendus doloremque quibusdam nam magni, facere sed corporis error? Voluptate repudiandae natus eligendi vero consequatur recusandae explicabo quas, iure animi delectus? Eveniet, doloribus. Molestias animi, placeat, nobis est voluptas exercitationem quod sapiente similique quos porro commodi vero? Numquam, omnis architecto ullam quis incidunt aliquid distinctio voluptates officiis error earum eligendi pariatur odio.
+      </p>
+      <button (click)="seeAllCards()">Back</button>
+    </section>
+  }
 </div>
