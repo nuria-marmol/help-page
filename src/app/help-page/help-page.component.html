@@ -8,7 +8,7 @@
   </section>
   @if (allCards) {
     <section class="cards-section">
-      @for (card of cards; track card.title) {
+      @for (card of filteredCards; track card.title) {
         <app-icon-card [card]="card" (selectedCard)="seeSelectedCard($event)"></app-icon-card>
       }
     </section>

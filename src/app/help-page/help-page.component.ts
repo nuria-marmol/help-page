@@ -49,6 +49,7 @@ export class HelpPageComponent {
       iconColor: 'light-blue'
     }
   ]
+  filteredCards: Array<IconCardType> = [...this.cards];
   selectedCard: IconCardType = {
     title: '',
     text: '',
@@ -66,7 +67,7 @@ export class HelpPageComponent {
   }
 
   seeInputSearch() {
-    console.log(this.inputSearch);
+    this.filteredCards = this.cards.filter(element => element.title.toLowerCase().includes(this.inputSearch.trim().toLowerCase()));
   }
 
   seeAllCards() {
